@@ -18,11 +18,26 @@
 
         public static bool operator ==(Credentials? src, object? target)
         {
-            return src.Equals(target);
+            if (target == null)
+            {
+                if (src == null)
+                    return true;
+                else
+                    return false;
+            }
+            return src!.Equals(target);
         }
         public static bool operator !=(Credentials? src, object? target)
         {
-            return !src.Equals(target);
+            if (target == null)
+            {
+                if (src == null)
+                    return false;
+                else
+                    return true;
+            }
+
+            return !src!.Equals(target);
         }
 
         public Credentials(string username, string password)
