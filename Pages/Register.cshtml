@@ -1,0 +1,41 @@
+﻿@page
+<div class="container">
+    <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-1">Password</div>
+        <div class="col-5"><input type="text" class="w-100" id="passwordInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6 text-end">
+            <input type="button" id="registerButton" value="Auth" />
+        </div>
+    </div>
+
+    <div id="userinfo">
+        <div class="userinfo-block">
+            <div class="col-1">ФИО</div>
+            <input type="text" id="FIO"></input><br/>
+            <div class="col-1">ИНН</div>
+            <input type="text" id="INN"></input><br/>
+            <div class="col-1">Паспортные данные</div>
+            <input type="text" id="Pasport"></input><br/>
+            <div class="col-1">Телефон</div>
+            <input type="text" id="Phone"></input><br />
+            <div class="col-1">Адрес</div>
+            <input type="text" id="Adress"></input><br/>
+            <div class="col-1">Должность</div>
+            <select id="JobTitle" size="3" multiple name="JobTitle">
+                <option selected value="1">Директор</option>
+                <option value="2">Бухгалтер</option>
+                <option value="3">Доверенное лицо</option>
+            </select><br />
+           <input type="button" id="updateInfoButton" value="Обновить информацию"></input>
+        </div>
+
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/userservice-register.js"></script>
